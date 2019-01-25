@@ -1,0 +1,434 @@
+#nts {
+	padding: 0.5em 0.5em;
+	width: auto;
+	margin: 5px 0;
+	}
+
+#nts, #nts td {
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size: 13px;
+	}
+
+#nts a {
+	text-decoration: underline;
+	}
+
+#nts h3 {
+	text-decoration: underline;
+	margin: 1em 0 0.5em 0;
+	}
+
+#nts-user-menu {
+	margin: 0;
+	padding: 0.5em 1em;
+	font-size: 75%;
+	color: #666666;
+	}
+ul#nts-user-menu  li {
+	margin: 0 0.5em 0 0;
+	line-height: 100%;
+	}
+
+#nts-menu1 {
+	background: #ccff66;
+	margin: 0;
+	padding: 4px 10px;
+	}
+
+#nts-menu1 .current, #nts-menu2 .current {
+	font-weight: bold;
+	}
+
+#nts-menu1 a {
+	color: #000;
+	font-weight: normal;
+	margin: 0;
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+	}
+
+#nts-menu1 a:hover, .current {
+	background: #eeffbb;
+	color: #333;
+	}
+
+#nts-user-menu li, #nts-menu1 li, #nts-menu2 li {
+	display: inline;
+	line-height: 200%;
+	list-style: none;
+	text-align: center;
+	}
+
+#nts-menu2 {
+	background: #339900;
+	border-bottom: none;
+	margin: 0;
+	color: #fff;
+	padding: 4px 10px;
+	font-size: 90%;
+	}
+
+#nts-menu2 .current {
+	background: #ddffbb;
+	color: #000;
+	text-decoration: none;
+	}
+
+#nts-menu2 a {
+	border: none;
+	color: #fff;
+	margin: 0;
+	padding: 0.25em 0.5em;
+	}
+
+#nts-menu2 a:hover {
+	background: #ddffbb;
+	color: #393939;
+	}
+
+#nts-menu2 li {
+	line-height: 150%;
+	}
+
+ul#nts-announce,
+ul#nts-admin-announce {
+	margin: 0.5em 0;
+	}
+
+ul#nts-announce,
+ul#nts-admin-announce {
+	padding: 0;
+	}
+
+ul#nts-announce li {
+	margin: 0.25em 0;
+	padding: 0.25em 1em;
+	list-style-type: none;
+
+	background-color: #ccffcc;
+	color: #336633;
+	border: #336633 1px solid;
+	}
+
+ul#nts-announce li.error {
+	background: #ffcccc;
+	color: #663333;
+	border: #663333 1px solid;
+	}
+
+ul#nts-admin-announce li {
+	margin: 0.5em 0;
+	padding: 0.5em 1em;
+	list-style-type: none;
+	background-color: #ffffcc;
+	background-color: #fff0f0;
+	border: #cc0000 1px solid;
+	}
+
+#nts table {
+	border-collapse: collapse;
+	}
+#nts table th {
+	padding: 0.25em 0.5em;
+	color: #000000;
+	font-size: 90%;
+	text-align: left;
+	}
+#nts table th a {
+	color: #ffffff;
+	}
+#nts table td, #nts table.nts-listing td {
+	padding: 0.5em 1em;
+	margin: 0.5em 1em;
+	}
+#nts table.nts-listing td  {
+	vertical-align: top;
+	}
+#nts table .listing-header th {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	}
+#nts table .sub-header td {
+	border-top-width: 1px;
+	border-top-style: solid;
+	padding-top: 1em;
+	}
+#nts table .even, #nts .nts-listing .even {
+	background-color: #dddddd;
+	}
+#nts table .odd, #nts .nts-listing .odd {
+	}
+
+#nts table.nts-listing-top td ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}
+#nts table.nts-listing-top td ul li {
+	display: inline;
+	margin: 0 0 0 0.5em;
+	}
+
+#nts .nts-listing td.nts-row-actions {
+	padding: 0 1em 0.5em 1em;
+	margin: 0;
+	}
+#nts .nts-listing .nts-row-actions a {
+	margin: 0 0;
+	padding: 0 0.5em;
+	border-left: #999999 1px solid;
+	}
+
+#nts table.sublist td, #nts table.sublist th {
+	font-size: 70%;
+	}
+	
+#nts form {
+	margin: 0;
+	}
+#nts form table th {
+	text-align: left;
+	}
+#nts form table td.help {
+	font-style: italic;
+	padding-top: 1em;
+	padding-bottom: 0;
+	color: #666666;
+	}
+
+#nts-footer {
+	margin: 2em 0;
+	padding: 0.5em;
+	font-size: 80%;
+	border-top: #bbbbbb 1px dotted;
+	}
+
+#nts .alert {
+	color: #cc0000;
+	}
+#nts .warning {
+	color: #ff9966;
+	}
+#nts .ok {
+	color: #00cc00;
+	}
+
+/* CALENDAR */
+#nts div.nts-calendar {
+	margin: 5px 5px;
+	width: 220px;
+	}
+#nts div.nts-calendar table {
+	margin: 0 auto;
+	}
+#nts div.nts-calendar td {
+	padding: 1px;
+	width: 30px;
+	text-align: center;
+	}
+#nts div.nts-calendar td div {
+	padding: 0.4em 0.2em;
+	text-align: center;
+	font-size: 0.9em;
+	}
+#nts div.nts-calendar td div.not_available {
+	}
+#nts div.nts-calendar td div.available {
+	}
+#nts div.nts-calendar td div.selected {
+	border-width: 2px;
+	border-style: solid;
+	}
+#nts div.nts-calendar tr.months td {
+	font-weight: bold;
+	padding-top: 1em;
+	}
+#nts div.nts-calendar tr.months td a {
+	text-decoration: none;
+	}
+#nts div.nts-calendar tr.days td {
+	padding: 0.25em 0 0.5em 0;
+	}
+#nts div.nts-calendar tr.days td div {
+	font-size: 0.75em;
+	}
+/* approved appointments */
+#nts .nts-calendar td div.approved {
+	background-color: #ccff66;
+	}
+/* pending appointments */
+#nts .nts-calendar td div.pending {
+	background-color: #ff9900;
+	}
+
+#nts div.nts-calendar td div
+	{
+	background-color: #ffffff;
+	color: #000000;
+	}
+#nts div.nts-calendar td div.available
+	{
+	background-color: #ccff99;
+	}
+#nts div.nts-calendar td div.not_available
+	{
+	background-color: #dddddd;
+	}
+
+#nts div.nts-calendar td div.selected {
+	border-color: #006600;
+	}
+#nts div.nts-calendar a
+	{
+	color: #000000;
+	border-color: #99cc33;
+	}
+/* END OF CALENDAR */
+
+/* APPOINTMENT REQUEST PROCESS INFORMATION */
+#nts #nts-appointment-flow {
+	background-color: #ffffff;
+	padding: 0 0;
+	margin: 1em 0 2em 0;
+	width: 100%;
+	}
+#nts #nts-appointment-flow table {
+	background-color: #ffffff;
+	width: auto;
+	border-collapse: collapse;
+	border-spacing: 1px 1px;
+	}
+#nts #nts-appointment-flow td, #nts #nts-appointment-flow th {
+	padding: 0.5em 1em;
+	vertical-align: top;
+	}
+#nts #nts-appointment-flow td {
+	background-color: #eeeeee;
+	}
+#nts #nts-appointment-flow th {
+	border-bottom: #bbbbbb 1px solid;
+	text-decoration: underline;
+	text-align: left;
+	color: #339900;
+	background-color: #ffffff;
+	}
+#nts .ntsApproved {
+	background-color: #ccff66;
+	}
+#nts .ntsPending {
+	background-color: #ff9900;
+	}
+#nts .ntsNoShow {
+	background-color: #ff3300;
+	}
+#nts .ntsCancelled {
+	background-color: #999999;
+	}
+
+#nts .ntsReasonList li {
+	margin: 1em 0;
+	}
+#nts h2 {
+	margin: 0.5em 0;
+	color: #9c02a7;
+	}
+#nts .subtitle {
+	font-size: 0.8em;
+	color: #999999;
+	}
+
+#nts .simplemodal-close {
+	display: block;
+	float: right;
+	font-weight: bold;
+	color: #bb0000;
+	border: #bb0000 2px solid;
+	text-decoration: none;
+	line-height: 1.5em;
+	font-size: 1.25em;
+	padding: 0 0.5em;
+	margin: 0.25em;
+	}
+
+#nts a.nts-tooltip,
+#nts a.nts-tooltip:link,
+#nts a.nts-tooltip:visited,
+#nts a.nts-tooltip:active {
+	position: relative;
+	font-weight: normal;
+	}
+#nts a.nts-tooltip {
+	text-decoration: none;
+	}
+
+#nts a.nts-tooltip:hover {
+	background: transparent;
+	z-index: 100;
+	}
+
+
+#nts .ntsContainerTable {
+	width: 90%;
+	}
+#nts .ntsContainerTable td {
+	padding: 0.5em 0.5em;
+	}
+
+#nts .nts-listing {
+	padding: 0 0;
+	margin: 0 0;
+	}
+
+#nts .nts-listing td ul {
+	padding: 0 0;
+	margin: 0 0;
+	}
+
+#nts .nts-listing li {
+	display: block;
+	margin: 1em 0;
+	padding: 0 0;
+	color: #000000;
+	text-decoration: none;
+	list-style-type: none;
+	}
+#nts .nts-listing li ul {
+	padding: 0 0.5em;
+	margin: 0 0;
+	}
+#nts .nts-listing li ul li {
+	padding: 0.25em 0.5em;
+	margin: 0 0;
+	}
+
+#nts .nts-listing li.appointment-time {
+	border-bottom: #000000 1px solid;
+	}
+
+#nts .nts-listing li h3 {
+	margin: 0 0;
+	padding: 0 0;
+	text-decoration: none;
+	}
+#nts .nts-listing li h2 {
+	margin: 0 0;
+	padding: 0 0;
+	}
+
+#nts .nts-listing li table {
+	margin: 0.5em 0 0 1em;
+	border-collapse: separate;
+	}
+
+#nts .nts-listing li td {
+	padding: 0.25em 0.5em;
+	}
+#nts .nts-listing li td.nts-row-actions {
+	padding: 0.25em 0.5em;
+	}
+
+#nts .ntsDeleteControl {
+	color: #cc0000;
+	text-decoration: none;
+	font-weight: bold;
+	}

@@ -1,0 +1,218 @@
+<?php
+global $NTS_VIEW;
+$ntsdb =& dbWrapper::getInstance();
+$uif =& ntsUserIntegratorFactory::getInstance();
+$integrator =& $uif->getIntegrator();
+?>
+<table>
+<tr>
+	<th><?php echo M('From'); ?></th>
+	<td>
+	<?php
+	echo $this->makeInput (
+	/* type */
+		'date/Calendar',
+	/* attributes */
+		array(
+			'id'		=> 'from',
+			),
+	/* validators */
+		array(
+			array(
+				'code'		=> 'notEmpty.php', 
+				'error'		=> 'Please enter the from date',
+				),
+			)
+		);
+	?>
+	</td>
+</tr>
+<tr>
+	<th><?php echo M('To'); ?></th>
+	<td>
+	<?php
+	echo $this->makeInput (
+	/* type */
+		'date/Calendar',
+	/* attributes */
+		array(
+			'id'		=> 'to',
+			),
+	/* validators */
+		array(
+			array(
+				'code'		=> 'notEmpty.php', 
+				'error'		=> 'Please enter the to date',
+				),
+			array(
+				'code'		=> 'greaterEqualThan.php', 
+				'error'		=> "This date can't be before the from date",
+				'params'	=> array(
+					'compareWithField' => 'from',
+					),
+				),
+			)
+		);
+	?>
+	</td>
+</tr>
+<tr>
+	<th><?php echo M('Status'); ?></th>
+	<td>
+	<?php
+	$statusOptions = array(
+		array( 0,			M('- Any -') ),
+		array( 'approved',	M('Approved') ),
+		array( 'pending',	M('Pending') ),
+		array( 'noshow',	M('No Show') ),
+		array( 'cancelled',	M('Cancelled') ),
+		);
+	
+	echo $this->makeInput (
+	/* type */
+		'select',
+	/* attributes */
+		array(
+			'id'		=> 'status',
+			'options'	=> $statusOptions,
+			)
+		);
+	?>
+	</td>
+</tr>
+
+<?php
+/* services */
+$sql =<<<EOT
+SELECT
+	id, title
+FROM
+	{PRFX}services
+ORDER BY
+	show_order ASC, title ASC
+EOT;
+
+$result = $ntsdb->runQuery( $sql );
+$serviceOptions = array();
+$serviceOptions[] = array( 0, M('- Any -') );
+if( $result ){
+	while( $e = $result->fetch() ){
+		$serviceOptions[] = array( $e['id'], $e['title'] );
+		}
+	}
+?>
+<tr>
+	<th><?php echo M('Service'); ?></th>
+	<td>
+	<?php
+	echo $this->makeInput (
+	/* type */
+		'select',
+	/* attributes */
+		array(
+			'id'		=> 'service',
+			'options'	=> $serviceOptions,
+			)
+		);
+	?>
+	</td>
+</tr>
+
+<?php
+/* locations */
+$sql =<<<EOT
+SELECT
+	id, title
+FROM
+	{PRFX}locations
+ORDER BY
+	show_order ASC, title ASC
+EOT;
+
+$result = $ntsdb->runQuery( $sql );
+$locationOptions = array();
+$locationOptions[] = array( 0, M('- Any -') );
+if( $result ){
+	while( $e = $result->fetch() ){
+		$locationOptions[] = array( $e['id'], $e['title'] );
+		}
+	}
+?>
+<tr>
+	<th><?php echo M('Location'); ?></th>
+	<td>
+	<?php
+	echo $this->makeInput (
+	/* type */
+		'select',
+	/* attributes */
+		array(
+			'id'		=> 'location',
+			'options'	=> $locationOptions,
+			)
+		);
+	?>
+	</td>
+</tr>
+
+
+<?php
+$resourceOptions = array();
+$resourceOptions[] = array( 0, M('- Any -') );
+reset( $NTS_VIEW['allResources'] );
+foreach( $NTS_VIEW['allResources'] as $re ){
+	$resourceOptions[] = array( $re->getId(), $re->getProp('title') );
+	}
+?>
+<tr>
+	<th><?php echo M('Bookable Resource'); ?></th>
+	<td>
+	<?php
+	echo $this->makeInput (
+	/* type */
+		'select',
+	/* attributes */
+		array(
+			'id'		=> 'resource',
+			'options'	=> $resourceOptions,
+			)
+		);
+	?>
+	</td>
+</tr>
+
+<?php
+$customers = $integrator->getUsers( 
+	array('_role' => '="customer"'),
+	array( array('last_name', 'ASC'), array('first_name', 'ASC') )
+	);
+$customerOptions = array();
+$customerOptions[] = array( 0, M('- Any -') );
+foreach( $customers as $ca ){
+	$customerOptions[] = array( $ca['id'], $ca['first_name'] . ' ' . $ca['last_name'] );
+	}
+?>
+<tr>
+	<th><?php echo M('Customer'); ?></th>
+	<td>
+	<?php
+	echo $this->makeInput (
+	/* type */
+		'select',
+	/* attributes */
+		array(
+			'id'		=> 'customer',
+			'options'	=> $customerOptions,
+			)
+		);
+	?>
+	</td>
+</tr>
+
+</table>
+
+<p>
+<DIV CLASS="buttonBar">
+<?php echo $this->makePostParams('-current-', 'search' ); ?>
+<INPUT TYPE="submit" VALUE="<?php echo M('Search'); ?>">
+</DIV>

@@ -1,0 +1,325 @@
+#nts #haDayHours2 {
+	margin: 0;
+	padding: 0;
+	}
+#nts #haDayHours2 table {
+	border-collapse: separate;
+	border-collapse: collapse;
+	border-width: 1px;
+	table-layout: fixed;
+	width: 1000px;
+	}
+#nts #haDayHours2 table td,
+#nts #haDayHours2 table th {
+	width: 120px;
+	padding: 2px 2px;
+	margin: 0;
+	border-width: 1px;
+	text-align: center;
+	}
+
+#nts #haDayHours2 .today {
+	border: #99cc33 1px solid;
+	}
+
+#nts #haDayHours2 table td.arrow,
+#nts #haDayHours2 table th.arrow {
+	width: 40px;
+	}
+
+#nts #haDayHours2 table.config td,
+#nts #haDayHours2 table.config th {
+	text-align: left;
+	padding: 0 0 1em 0;
+	width: auto;
+	}
+#nts #haDayHours2 table.config div {
+	float: left;
+	font-size: 0.9em;
+	height: 2em;
+	line-height: 2em;
+	width: 10em;
+	margin: 2px;
+	text-align: center;
+	}
+#nts #haDayHours2 table td ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0px;
+	}
+#nts #haDayHours2 table.month td ul {
+	border: #bbbbbb 1px solid;
+	padding: 2px 2px;
+	}
+
+#nts #haDayHours2 table td li {
+	margin: 0px 0px;
+	padding: 2px 0px;
+	width: 100%;
+	overflow: hidden;
+	}
+#nts #haDayHours2 table td div {
+	padding: 2px 2px;
+	display: block;
+	float: left;
+	}
+#nts #haDayHours2 .res-h {
+	width: 65%;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: left;
+	padding: 2px 2px;
+	padding: 0 0;
+	}
+#nts #haDayHours2 .res-h span,
+#nts #haDayHours2 .res-h a {
+	margin: 0 0;
+	padding: 2px 2px;
+	display: block;
+	}
+	
+#nts #haDayHours2 .apps-h {
+	width: 20%;
+	margin: 0px 0px 0px 2px;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+
+	background-color: #dddddd;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #dddddd; 
+	}
+#nts #haDayHours2 .apps-h-alone {
+	width: auto;
+	margin: 0 0;
+	float: none;
+	}
+
+#nts #haDayHours2 a,
+#nts #haDayHours2 a:visited {
+	display: block;
+	text-decoration: none;
+	color: #000000;
+	}
+#nts #haDayHours2 a:hover {
+	text-decoration: none;
+	}
+
+#nts #haDayHours2 .hours {
+	font-weight: bold;
+	width: auto;
+	}
+
+#nts #haDayHours2 .hours div {
+	width: 100%;
+	float: none;
+	}
+
+#nts #haDayHours2 .timeoff {
+	background-color: #ffcc99;
+	border-color: #ffcc99;
+	}
+#nts #haDayHours2 .not-working {
+	background-color: #cccccc;
+	border-color: #cccccc;
+	}
+#nts #haDayHours2 .working {
+	background-color: #ccff99;
+	border-color: #ccff99;
+	}
+#nts #haDayHours2 .fullbook {
+	background-color: #999933;
+	border-color: #999933;
+	}
+#nts #haDayHours2 .partbook {
+	background-color: #99cc33;
+	border-color: #99cc33;
+	}
+#nts #haDayHours2 .partbook {
+	background-color: #99cc33;
+	border-color: #99cc33;
+	}
+
+#nts #haDayHours2 .pending {
+	border-color: #ff3300;
+	}
+
+#nts #haDayHours2 .selectable {
+	}
+#nts #haDayHours2 .selectable a {
+	color: #006600;
+	border: #00cc00 2px solid;
+	text-decoration: underline;
+	}
+#nts #haDayHours2 .selectable a:hover {
+	background-color: #ccff99;
+	color: #000000;
+	border: #ccff99 2px solid;
+	}
+#nts #haDayHours2 .not-selectable {
+	}
+#nts #haDayHours2 .not-selectable a {
+	color: #333333;
+	border: #cccccc 1px solid;
+	}
+#nts #haDayHours2 .not-selectable a:hover {
+	background-color: #cccccc;
+	}
+
+/* DATE HEADER AND NAVIGATION */
+#nts #haDayHours2 h2 {
+	font-size: 200%;
+	}
+#nts #haDayHours2 h3 {
+	font-size: 125%;
+	}
+
+#nts #haDayHours2 h2,
+#nts #haDayHours2 h3 {
+	margin: 5px 0 0 0;
+	padding: 0;
+	text-decoration: none;
+	}
+#nts #haDayHours2 h2 a,
+#nts #haDayHours2 h3 a {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: #666666;
+	}
+#nts #haDayHours2 h3 a {
+	color: #000000;
+	}
+
+#nts #haDayHours2 h2 a:hover,
+#nts #haDayHours2 h3 a:hover {
+	text-decoration: none;
+	background-color: #bbbbbb;
+	color: #ffffff;
+	}
+
+#nts #haDayHours2 table td.hideRow {
+	text-align: center;
+	border: #bbbbbb 1px dashed;
+	padding: 0.25em 0.1em;
+	background-color: #eeeeee;
+	width: auto;
+	}
+#nts #haDayHours2 table td.hideRow a {
+	text-decoration: underline;
+	color: #333333;
+	}
+
+#nts #haDayHours2 .holder {
+	width: auto;
+	}
+	
+#nts-ajax-holder {
+	display: none;
+	text-decoration: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: auto;
+	z-index: 10;
+	color: #000000;
+	background: #eeeeee;
+	background: #ffffff;
+	text-align: left;
+	padding: 0.5em 1em 1em 1em;
+	border: #999999 1px solid;
+	}
+	
+#nts-ajax-holder h3 {
+	text-decoration: none;
+	margin: 0 0;
+	padding: 0 0;
+	}
+#nts-ajax-holder ul {
+	margin: 0.25em 0 0.25em 0em;
+	padding: 0.25em 0;
+	list-style-type: none;
+	}
+#nts-ajax-holder ul li {
+	margin: 0 0 0.25em 0;
+	padding: 0 0;
+	}
+#nts-ajax-holder ul.nts-boxed-selector {
+	height: 8em;
+	width: 20em;
+	overflow-y: auto;
+	overflow-x: hidden;
+	}
+#nts-ajax-holder ul.nts-boxed-selector li {
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	}
+#nts-ajax-holder ul.nts-boxed-selector li a {
+	margin: 0 0;
+	padding: 2px 2px;
+	display: block;
+	}
+
+#nts-ajax-holder ul li a.service-h {
+	margin: 0;
+	line-height: 1.25em;
+	padding: 0.1em 0.5em;
+	color: #000000;
+	border: #999999 1px solid;
+	}
+
+#nts-ajax-holder .available {
+	background-color: #ccff99;
+	}
+#nts-ajax-holder .not-available {
+	background-color: #cccccc;
+	}
+
+#nts-ajax-holder option {
+	margin: 2px 0;
+	}
+
+#nts-ajax-holder ul li a.time-h, #nts-ajax-holder ul li.time-h {
+	display: block;
+	margin: 0.5em 0;
+	line-height: 1.25em;
+	padding: 0.25em 0.5em;
+	color: #000000;
+	text-decoration: none;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #99cc33;
+	}
+#nts-ajax-holder ul li a.pending {
+	border-color: #ff3300;
+	}
+
+#nts-ajax-holder ul .app-h {
+	margin: 0.5em 0;
+	line-height: 1.25em;
+	padding: 0.25em 0.5em;
+	color: #000000;
+	text-decoration: none;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #eeeeee;
+	}
+#nts-ajax-holder ul .app-h a {
+	text-decoration: none;
+	color: #000000;
+	}
+#nts-ajax-holder ul .pending {
+	border-color: #ff3300;
+	}
+#nts-ajax-holder ul .approved {
+	border-color: #99cc33;
+	}
+#nts-ajax-holder ul li h2 {
+	font-size: 0.9em;
+	margin: 0.25em 0;
+	padding: 0 0;
+	}

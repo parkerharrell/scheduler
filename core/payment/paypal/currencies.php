@@ -1,0 +1,27 @@
+<?php
+$currencies = array(
+	'usd',
+	'eur',
+	'gbp',
+	'aud',
+	'cad',
+	'jpy',
+	'nzd',
+	'chf',
+	'hkd',
+	'sgd',
+	'sek',
+	'dkk',
+	'pln',
+	'nok',
+	'huf',
+	'czk',
+	'ils',
+	'mxn',
+	'brl',
+	'myr',
+	'php',
+	'twd',
+	'thb',
+	);
+?>
